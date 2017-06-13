@@ -6,7 +6,10 @@
 	<artifactId>Cucumber-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
+              
+        <properties>
+            <settings.localRepository>C:/Users/Katsiaryna_Pilnikava/.m2/repository</settings.localRepository>
+        </properties>
 	<name>Cucumber-demo</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
@@ -33,36 +36,29 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		    <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.7.4</version>
-    </dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
-				 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19.1</version>
-                <configuration>
-                    <testFailureIgnore>false</testFailureIgnore>
-                   <argLine>
-                        -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
-                        -Dcucumber.options="--plugin ru.yandex.qatools.allure.cucumberjvm.AllureReporter"
-                    </argLine>                   
-                </configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<testFailureIgnore>false</testFailureIgnore>
+					<argLine>
+						-javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.7.4/aspectjweaver-1.7.4.jar
+						-Dcucumber.options="--plugin ru.yandex.qatools.allure.cucumberjvm.AllureReporter"
+					</argLine>
+				</configuration>
+				  <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>1.7.4</version>
+                    </dependency>
+                </dependencies>
 			</plugin>
-			<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.19.1</version>
-        <configuration>
-          <includes>
-            <include>Sample.java</include>
-          </includes>
-        </configuration>
-      </plugin>
 		</plugins>
 	</build>
 </project>
