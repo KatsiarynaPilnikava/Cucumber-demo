@@ -11,3 +11,10 @@ Feature: Belly
     Given I have 40 cukes in my belly
     When I wait 1 hour
     Then my belly should growl
+    
+@run
+  Scenario: skip
+    Given I have 40 cukes in my belly
+    When I wait 1 second
+    Then my belly should growl
+    
