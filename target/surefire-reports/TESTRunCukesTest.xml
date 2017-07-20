@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="3" time="0.074558">
+<testcase classname="Belly" name="a few cukes" time="0.073001">
+<system-out><![CDATA[Given I have 42 cukes in my belly...........................................passed
+When I wait 1 hour..........................................................passed
+Then my belly should growl..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Belly" name="failure" time="0.001468">
+<failure message="java.lang.AssertionError: &#10;Expected: is &quot;growl&quot;&#10;     but: was &quot;silent&quot;&#13;&#10;&#9;at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)&#13;&#10;&#9;at org.junit.Assert.assertThat(Assert.java:865)&#13;&#10;&#9;at org.junit.Assert.assertThat(Assert.java:832)&#13;&#10;&#9;at Cucumber_demo.Cucumber_demo.BellyTest.my_belly_should_growl(BellyTest.java:30)&#13;&#10;&#9;at ✽.Then my belly should growl(resourses/feature/BellyTest.feature:13)&#13;&#10;"><![CDATA[Given I have 40 cukes in my belly...........................................passed
+When I wait 1 hour..........................................................passed
+Then my belly should growl..................................................failed
+
+StackTrace:
+java.lang.AssertionError: 
+Expected: is "growl"
+     but: was "silent"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at Cucumber_demo.Cucumber_demo.BellyTest.my_belly_should_growl(BellyTest.java:30)
+	at ✽.Then my belly should growl(resourses/feature/BellyTest.feature:13)
+]]></failure>
+</testcase>
+<testcase classname="Belly" name="skip" time="0.000089">
+<skipped><![CDATA[Given I have 40 cukes in my belly...........................................passed
+When I wait 1 second........................................................undefined
+Then my belly should growl..................................................skipped
+]]></skipped>
+</testcase>
+</testsuite>

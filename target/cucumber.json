@@ -1,0 +1,219 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "a few cukes",
+        "description": "",
+        "id": "belly;a-few-cukes",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 69353053,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I have 42 cukes in my belly",
+            "match": {
+              "arguments": [
+                {
+                  "val": "42",
+                  "offset": 7
+                }
+              ],
+              "location": "BellyTest.i_have_cukes_in_my_belly(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 75369,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I wait 1 hour",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 7
+                }
+              ],
+              "location": "BellyTest.i_wait_hour(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3572463,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "my belly should growl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "growl",
+                  "offset": 16
+                }
+              ],
+              "location": "BellyTest.my_belly_should_growl(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@run"
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "failure",
+        "description": "",
+        "id": "belly;failure",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 85952,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I have 40 cukes in my belly",
+            "match": {
+              "arguments": [
+                {
+                  "val": "40",
+                  "offset": 7
+                }
+              ],
+              "location": "BellyTest.i_have_cukes_in_my_belly(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 52918,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I wait 1 hour",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 7
+                }
+              ],
+              "location": "BellyTest.i_wait_hour(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1328730,
+              "error_message": "java.lang.AssertionError: \nExpected: is \"growl\"\n     but: was \"silent\"\r\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)\r\n\tat org.junit.Assert.assertThat(Assert.java:865)\r\n\tat org.junit.Assert.assertThat(Assert.java:832)\r\n\tat Cucumber_demo.Cucumber_demo.BellyTest.my_belly_should_growl(BellyTest.java:30)\r\n\tat ✽.Then my belly should growl(resourses/feature/BellyTest.feature:13)\r\n",
+              "status": "failed"
+            },
+            "line": 13,
+            "name": "my belly should growl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "growl",
+                  "offset": 16
+                }
+              ],
+              "location": "BellyTest.my_belly_should_growl(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@run"
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "skip",
+        "description": "",
+        "id": "belly;skip",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 88838,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I have 40 cukes in my belly",
+            "match": {
+              "arguments": [
+                {
+                  "val": "40",
+                  "offset": 7
+                }
+              ],
+              "location": "BellyTest.i_have_cukes_in_my_belly(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "I wait 1 second",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "my belly should growl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "growl",
+                  "offset": 16
+                }
+              ],
+              "location": "BellyTest.my_belly_should_growl(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 15,
+            "name": "@run"
+          }
+        ]
+      }
+    ],
+    "name": "Belly",
+    "description": "",
+    "id": "belly",
+    "keyword": "Feature",
+    "uri": "resourses/feature/BellyTest.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@run"
+      }
+    ]
+  }
+]
