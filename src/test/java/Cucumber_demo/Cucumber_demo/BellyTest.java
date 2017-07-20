@@ -16,6 +16,7 @@ public class BellyTest
     public void i_have_cukes_in_my_belly(int cukes) throws Throwable {
         belly = new Belly();
         belly.eat(cukes);
+	    //test commit
     }
 
     @When("^I wait (\\d+) hour$")
