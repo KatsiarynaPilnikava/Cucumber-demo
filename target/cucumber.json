@@ -31,7 +31,7 @@
           {
             "result": {
               "duration": 708475,
-              "status": "passed"
+              "status": "failed"
             },
             "line": 6,
             "name": "I wait 1 hour",
